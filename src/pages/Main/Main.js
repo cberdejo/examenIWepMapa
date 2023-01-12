@@ -25,7 +25,7 @@ const Main = ({usuario}) => {
     setLineasFiltradas([])
   
     // const response = await axios.get("http://localhost:8000/lineas");
-    const response = await axios.get("http://localhost:8000/lineas");
+    const response = await axios.get("https://ibvmpa.deta.dev/lineas");
     setCargando(false);
     setLineas(response.data)
     setLineasFiltradas(lineas)
@@ -63,7 +63,7 @@ const Main = ({usuario}) => {
   const filterDataByName = async (value) => {
   
     if (value !== ""){
-     const result = await  axios.get("http://localhost:8000/lineas/" + value);   
+     const result = await  axios.get("https://ibvmpa.deta.dev/lineas/" + value);   
      
      //axios.post("http://localhost:8000/logs/" + usuario.token.credential + "/filtrar?name = " + value );
            
@@ -78,7 +78,7 @@ const Main = ({usuario}) => {
   const filterDataByAddress = async (value) => {
   
     if (value !== ""){
-      const result = await  axios.get("http://localhost:8000/lineas/direccion" + value);      
+      const result = await  axios.get("https://ibvmpa.deta.dev/lineas/direccion" + value);      
       setLineasFiltradas(result.data);
       console.log(value);
     }else{
@@ -91,7 +91,7 @@ const Main = ({usuario}) => {
     console.log(sentido);
     console.log(numLinea);
     
-    const result = await  axios.get("http://localhost:8000/lineas/" + sentido + "/"+ numLinea);   
+    const result = await  axios.get("https://ibvmpa.deta.dev/lineas/" + sentido + "/"+ numLinea);   
     setLineasFiltradas(result.data);
   
     

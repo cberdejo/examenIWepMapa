@@ -20,7 +20,7 @@ const Logs = ({ usuario }) => {
         
 
         // const response = await axios.get("http://localhost:8000/users");
-        const response = await axios.get("http://localhost:8000/users");
+        const response = await axios.get("https://ibvmpa.deta.dev/users");
         setUsers(response.data)
         setCargando(false);
     }
@@ -29,7 +29,7 @@ const Logs = ({ usuario }) => {
        
 
         // const response = await axios.get("http://localhost:8000/logs");
-        const response = await axios.get("http://localhost:8000/logs");
+        const response = await axios.get("https://ibvmpa.deta.dev/logs");
         setLogs(response.data)
         setCargando(false);
     }
