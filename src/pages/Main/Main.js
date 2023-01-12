@@ -1,44 +1,41 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react'
 import { Styler } from '../../components/Styler/Styler';
 import {  CircularProgress } from '@mui/material';
 import Container from '@mui/material/Container';
 import axios from 'axios';
 import Titulo from '../../components/common/Titulo/Titulo';
-import { useNavigate } from 'react-router-dom';
-import Box from '@mui/material/Box';
 import Mapa from '../../components/Mapa/Mapa';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm } from 'react-hook-form';
-import * as Yup from 'yup';
 import Grid from '@mui/material/Grid';
-import { Button, TextField } from '@mui/material';
+import { Button } from '@mui/material';
 import SearchBar from '../../components/common/SearchBar/SearchBar';
 import { NumberPicker } from 'react-widgets';
 
+
 const Main = ({usuario}) => {
-  const navigate = useNavigate();
+ 
   const [cargando, setCargando] = useState(true);
   const [lineas, setLineas] = useState([]);
   const [lineasFiltradas, setLineasFiltradas] = useState([]);
   const [sentido, setSentido] = useState([1]);
   const [numLinea, setNumLinea] = useState([1]);
- 
-
+  
   const getLogs = async () => {
     setLineas([])
     setLineasFiltradas([])
   
-
-
     // const response = await axios.get("http://localhost:8000/lineas");
     const response = await axios.get("http://localhost:8000/lineas");
     setCargando(false);
     setLineas(response.data)
     setLineasFiltradas(lineas)
   }
-
+ 
   useEffect(() => {
+    
     getLogs()
+    
+   
   }, [cargando]);
 
   /******************************** FILTROS ********************************/

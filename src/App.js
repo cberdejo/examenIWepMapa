@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './App.css';
 import React, { useState } from 'react';
 import MainAppBar from './components/MainAppBar/MainAppBar';

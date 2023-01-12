@@ -1,8 +1,8 @@
+/* eslint-disable */
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Box } from '@mui/material';
 import L from 'leaflet';
-import Image from 'mui-image';
 import { Styler } from '../Styler/Styler';
 
 function defaultIcon() {
