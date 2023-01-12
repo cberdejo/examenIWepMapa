@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import Typography from '@mui/material/Typography';
 import { Styler } from '../../Styler/Styler';

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react'
 import { Styler } from '../../components/Styler/Styler';
 import { CircularProgress } from '@mui/material';
